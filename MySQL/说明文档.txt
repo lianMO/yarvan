@@ -1,0 +1,34 @@
+﻿接口申请
+1.医院类Hospital
+(1)增加医院  /addHospital?Hospital={"name":$name,"address":$address}
+(2)删除医院  /deleteHospital?Hospital={"id":$id}               //删除医院时要同步删除对应科室
+
+2.医院科室类Hospital_item
+(1)增加科室 /addHosItem?Hospital_item={"hospital_id":$hospital_id,"name":$name}
+(2)删除科室 /deleteHosItem?Hospital_item={"id":$id}
+
+3.医院预约类Hospital_appointment
+
+4.分中心类 Service_shop
+(1)增加分中心 /addServiceShop?Service_shop={"shop_name":$name,"address":$address,"contact_way":$contact_way}
+(2)删除分中心 /deleteServiceShop?Service_shop={"id":$id}
+
+5.服务项目类 Service_item
+(1)增加项目 /addServiceItem?Service_item={"item_name":$name,"info":$info}
+(2)删除项目 /deleteServiceItem?Service_item={"id":$id}
+
+6.服务发布类 Service_appontment_info 
+(1)增加服务 /addServiceAppointInfo?Service_appontment_info={"shop_id":$sid,"item_id":$iid,"time_id":$tid,"date":$date}
+(2)删除服务 /deleteServiceAppointInfo?Service_appontment_info={"id":$id}
+
+7.兼职发布 Parttime_appointment_info 
+(1)增加兼职 /addParttimeInfo?Parttime_appointment_info={"shop_id":$sid,"item_id":$iid,"time_id":$tid,"count":$count,"date":$date,"is_morning":$period}
+(2)删除兼职 /deleteParttimeInfo?Parttime_appointment_info={"id":$id}
+
+8.医生审核  Doctor
+(1)审核更改状态 /updateDoctorStatus?Doctor={"id":$id,"status":$status}  //更新id的状态为status
+
+9.管理员类 Staff
+(1)增加管理员 /addStaff?Staff={"staffName":$staffname,"pwd":$pwd} //密码已做MD5加密
+(2)删除管理员 /deleteStaff?Staff={"id":$id}
+(3)更改密码   /updateStaffPw?Staff={"id":$id,"pwd":$pwd}  //已经进行账号验证和密码MD5加密，直接update
