@@ -6,9 +6,9 @@ class MySQL {
 		
 		//数据库配置
 		$host 	= 'localhost';
-		$user = 'root';
-		$pw = '76a4aa3224';
-		$dbName = 'yarvan';
+		$user = '';
+		$pw = '';
+		$dbName = '';
 		
 		try {
 			$conn = new mysqli($host, $user, $pw, $dbName);
